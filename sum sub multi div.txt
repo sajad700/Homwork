@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Double a, b;
+            Console.WriteLine("Enter a:");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter b:");
+            b = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("a + b = "+sum(a,b));
+            Console.WriteLine("a - b = "+subtraction(a,b));
+            Console.WriteLine("a * b = "+multipliction(a,b));
+            Console.WriteLine("a / b = "+division(a,b));
+
+            Console.ReadLine();
+
+        }
+        static public double sum(Double a, Double b)
+        {
+            return a + b;
+        }
+        static public double subtraction(Double a, Double b)
+        {
+            return a - b;
+        }
+        static public double multipliction(Double a, Double b)
+        {
+            return a * b;
+        }
+        static public double division(Double a, Double b)
+        {
+            return a / b;
+        }
+
+    }
+}
