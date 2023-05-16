@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExamVP
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float a, b, hight;
+            Console.WriteLine("Enter the a cm:");
+            a = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Enter the b cm:");
+            b = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Enter the hight cm:");
+            hight = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine($"moheet = {connect(a, b, hight)/100} m");
+            Console.WriteLine($"moheet = {connect(a, b, hight)} cm");
+            Console.WriteLine($"moheet = {100*connect(a, b, hight)} mm");
+            Console.WriteLine();
+            Console.WriteLine($"masahat = {connect(a, b, hight/100)} m");
+            Console.WriteLine($"masahat = {connect(a, b, hight)} cm");
+            Console.WriteLine($"masahat = {100*connect(a, b, hight)} mm");
+            Console.ReadLine();
+        }
+        static float connect(float a,float b, float h)
+        {
+            return 2 * (2 * (2 * h + a) + b);
+        }
+        static float masahat(float a,float b, float h)
+        {
+            return 2 * (a * h) + 2*(b * h)+2*(a+b);
+        }
+    }
+}
