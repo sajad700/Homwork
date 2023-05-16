@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int cradit;
+            double a;
+            Console.WriteLine("Enter total cradit passed : ");
+            cradit = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Enter total per cent : ");
+            a = Convert.ToDouble(Console.ReadLine());
+            if(cradit <=50 && a >= 70)
+            {
+                Console.WriteLine("you have a chance to make it up for it.");
+            }else if(cradit <=100 && a >= 80)
+            {
+                Console.WriteLine("you have a chance to make it up for it.");
+            }else if(cradit <= 120 && a >=90)
+            {
+                Console.WriteLine("you have a chance to make it up for it.");
+            }else if (cradit <=50 && a >= 55)
+            {
+                Console.WriteLine("you should work better.");
+            }
+            else
+            {
+                Console.WriteLine("you don\'t have a chance to make up for it.");
+            }
+            Console.ReadLine();
+        }
+    }
+}
