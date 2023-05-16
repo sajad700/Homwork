@@ -1,0 +1,45 @@
+using System;
+using System.Windows.Forms;
+
+namespace DesktopApp
+{
+    public class MainForm : Form
+    {
+        private TextBox MessageTextBox;
+        private Button button;
+
+        public MainForm()
+        {
+
+            MessageTextBox = new TextBox();
+            button = new Button();
+
+            MessageTextBox.Location = new System.Drawing.Point(10, 10);
+            MessageTextBox.Size = new System.Drawing.Size(100, 20);
+
+
+            button.Location = new System.Drawing.Point(10, 70);
+            button.Size = new System.Drawing.Size(100, 30);
+            button.Text = "Text";
+            button.Click += ShowButton_Click;
+
+
+            Controls.Add(MessageTextBox);
+            Controls.Add(button);
+        }
+
+        private void ShowButton_Click(object sender, EventArgs e)
+        {
+            string Text = MessageTextBox.Text;
+
+
+            MessageBox.Show("Message: " + Text);
+        }
+
+        [STAThread]
+        static void Main()
+        {
+            Application.Run(new MainForm());
+        }
+    }
+}
